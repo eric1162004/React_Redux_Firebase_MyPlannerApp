@@ -1,0 +1,110 @@
+[debug] [2019-10-27T06:11:14.276Z] ----------------------------------------------------------------------
+[debug] [2019-10-27T06:11:14.280Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\eric1\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2019-10-27T06:11:14.285Z] CLI Version:   7.6.1
+[debug] [2019-10-27T06:11:14.285Z] Platform:      win32
+[debug] [2019-10-27T06:11:14.286Z] Node Version:  v10.16.3
+[debug] [2019-10-27T06:11:14.287Z] Time:          Sat Oct 26 2019 23:11:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-10-27T06:11:14.288Z] ----------------------------------------------------------------------
+[debug] [2019-10-27T06:11:14.288Z] 
+[debug] [2019-10-27T06:11:14.298Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-27T06:11:14.300Z] > authorizing via signed-in user
+[debug] [2019-10-27T06:11:14.305Z] [iam] checking project my-planner-7e87a for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-10-27T06:11:14.308Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-27T06:11:14.309Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-27T06:11:14.517Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:14.529Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/my-planner-7e87a:testIamPermissions  
+
+[debug] [2019-10-27T06:11:14.694Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'my-planner-7e87a'...
+[info] 
+[info] i  deploying functions
+[debug] [2019-10-27T06:11:16.596Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-10-27T06:11:16.608Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/my-planner-7e87a/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2019-10-27T06:11:16.609Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/my-planner-7e87a/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2019-10-27T06:11:17.104Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:17.149Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2019-10-27T06:11:17.158Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-planner-7e87a/adminSdkConfig  
+ 
+[debug] [2019-10-27T06:11:17.403Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2019-10-27T06:11:17.407Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/my-planner-7e87a/configs  
+ 
+[debug] [2019-10-27T06:11:17.670Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (24.67 KB) for uploading
+[debug] [2019-10-27T06:11:17.860Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/my-planner-7e87a/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2019-10-27T06:11:18.971Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:18.986Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-496f6699-3665-4156-9f4c-19df704cbe32/93768470-d398-438f-ac8a-7d2e82d1b0a5.zip?GoogleAccessId=service-508579461820@gcf-admin-robot.iam.gserviceaccount.com&Expires=1572158479&Signature=jgm2wb8Ca9d1vnwT1dEQ6fHzvAyJY%2BQ6o0g5dNIpsVD8TQENOEiJUdVcXnBHrWYPIucTHTaJjeENFcOzbYNGSLo98Pc63xgYSeDQhbTPwTxHUMFrQDctNKLIOTWW7z7H%2Fbpv0OYWoRfeaq3DyShyNNXcHVveJPFCMqDs%2BBSkUvm7HBc0gTUbmFLanfwGIIBHsibj6Hk4ztWZdDnc4bMCjf57%2F5b4v3XYU09Ei7bxCjK4Vsg9K7yNhlXUNNfQ06kqzLVH1uDQH7lbTWztwsOp9uI5AV%2Ff2jtrmbAAxrTw7RRmuIooqjGdZ6cpJqRhN9ze%2FsKB1Ph3ARFXydzHv9n3%2FA%3D%3D  
+ <request body omitted>
+[debug] [2019-10-27T06:11:19.290Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[debug] [2019-10-27T06:11:19.307Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/my-planner-7e87a/locations/-/functions  
+ 
+[debug] [2019-10-27T06:11:19.835Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating Node.js 8 function helloWorld2(us-central1)...
+[debug] [2019-10-27T06:11:19.851Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: updating Node.js 8 function projectCreated(us-central1)...
+[debug] [2019-10-27T06:11:19.852Z] Trigger is:  {"eventTrigger":{"resource":"projects/my-planner-7e87a/databases/(default)/documents/projects/{projectId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[debug] [2019-10-27T06:11:19.854Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/my-planner-7e87a/services/cloudscheduler.googleapis.com  
+ 
+[debug] [2019-10-27T06:11:20.313Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:20.329Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/my-planner-7e87a/locations/us-central1/functions/helloWorld2 {"updateMask":"sourceUploadUrl,name,labels,runtime,httpsTrigger"} 
+
+[debug] [2019-10-27T06:11:20.332Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/my-planner-7e87a/locations/us-central1/functions/projectCreated {"updateMask":"sourceUploadUrl,name,labels,runtime,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+
+[debug] [2019-10-27T06:11:20.931Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:20.950Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:20.952Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/my-planner-7e87a/locations/-/functions  
+ 
+[debug] [2019-10-27T06:11:22.479Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:22.511Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9oZWxsb1dvcmxkMi9MaG80M3BvRExxSQ  
+ 
+[debug] [2019-10-27T06:11:22.514Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9wcm9qZWN0Q3JlYXRlZC9TT0ljWG1peWlVUQ  
+ 
+[debug] [2019-10-27T06:11:22.889Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:22.913Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:24.905Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9oZWxsb1dvcmxkMi9MaG80M3BvRExxSQ  
+ 
+[debug] [2019-10-27T06:11:24.916Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9wcm9qZWN0Q3JlYXRlZC9TT0ljWG1peWlVUQ  
+ 
+[debug] [2019-10-27T06:11:25.069Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:25.282Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:27.072Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9oZWxsb1dvcmxkMi9MaG80M3BvRExxSQ  
+ 
+[debug] [2019-10-27T06:11:27.286Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9wcm9qZWN0Q3JlYXRlZC9TT0ljWG1peWlVUQ  
+ 
+[debug] [2019-10-27T06:11:27.451Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:27.656Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:29.457Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9oZWxsb1dvcmxkMi9MaG80M3BvRExxSQ  
+ 
+[debug] [2019-10-27T06:11:29.633Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-27T06:11:29.674Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/bXktcGxhbm5lci03ZTg3YS91cy1jZW50cmFsMS9wcm9qZWN0Q3JlYXRlZC9TT0ljWG1peWlVUQ  
+ 
+[debug] [2019-10-27T06:11:29.870Z] <<< HTTP RESPONSE 200
